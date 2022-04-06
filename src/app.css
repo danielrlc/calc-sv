@@ -4,10 +4,23 @@
 
 @layer base {
   @font-face {
-      font-family: 'spartan';
-      src: local('spartan'),
-        url('/static/fonts/spartan-bold.woff') format('woff'),
-        url('/static/fonts/spartan-bold.woff2') format('woff2');
+    font-family: "spartan";
+    src: local("spartan"), url("/static/fonts/spartan-bold.woff") format("woff"),
+      url("/static/fonts/spartan-bold.woff2") format("woff2");
+  }
+}
+
+@layer components {
+  .c-key-regular {
+    @apply rounded-md border-b-4 bg-orange-500 border-orange-600 pt-2 text-gray-900 text-[1.5rem];
+  }
+
+  .c-key-blue {
+    @apply rounded-md border-b-4 bg-blue-800 text-white border-blue-801 text-lg pt-1;
+  }
+
+  .c-key-red {
+    @apply rounded-md border-b-4 bg-red-800 border-red-900 text-white pt-1;
   }
 }
 
@@ -22,4 +35,3 @@
     grid-column: 3 / 5;
   }
 }
-
